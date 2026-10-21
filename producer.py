@@ -14,8 +14,8 @@ def build_order(order_number : int) -> dict:
     return {
         "event_id": str(uuid.uuid4()), # unique per event -> for idempotency
         "order_id": f"ORD-{order_number}",
-        "item_id": f"ITEM-{random.randInt(100, 999)}",
-        "quantity": random.randInt(1, 5),
+        "item_id": f"ITEM-{random.randint(100, 999)}",
+        "quantity": random.randint(1, 5),
     }
 
 def publish(channel, order: dict) -> None:
